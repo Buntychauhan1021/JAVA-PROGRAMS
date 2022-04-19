@@ -2,7 +2,7 @@ package keshav1;
 
 interface  drawable 
 {
-	
+	 
 	void draw();
 }
 class circle implements drawable
