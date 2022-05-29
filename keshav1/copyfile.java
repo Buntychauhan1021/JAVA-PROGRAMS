@@ -5,20 +5,21 @@ public class copyfile {
 
 	public static void main(String[] args)
 	{
-		// TODO Auto-generated method stub
-		try
-		{
-File f =new File("C:\\Users\\acer\\Desktop\\copy.txt");
+// TODO Auto-generated method stub
 
-FileInputStream in =null;
-FileOutputStream out =null;
-
-int content;
-while((content=in.read() )!=-1)
+FileInputStream out =null;
+FileOutputStream in =null;
+try
+{   
+	out= new FileInputStream("C:\\Users\\acer\\Desktop\\FileOperationSystem.txt");
+	in = new FileOutputStream("C:\\Users\\acer\\Desktop\\copy.txt");
+	 
+String c;
+while((c=in.read() )!=-1)
 {
-	out.write(content);
+    out.write(c);
 }
-		
+		System.out.println("copied successfully");
 	}
 		catch(IOException e)
 		{
