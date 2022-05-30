@@ -1,0 +1,85 @@
+package keshav66;
+
+import java.io.*;
+import java.io.IOException;
+import java.util.Scanner;
+
+class k 
+{
+	private int empno;
+
+	private String empname;
+
+	private int empbasic;
+	
+	
+	k(int n,String name,int empbasic)
+	{
+		empno=this.empno;
+		empname=this.empname;
+		empbasic=this.empbasic;
+		
+	}
+	
+	public void setempno(int empno)
+	{
+		empno=this.empno;
+	}
+	public void setempname(String empname)
+	{
+		empname=this.empname;
+	}
+	public void setempbasic(int empbasic)
+	{
+		empbasic=this.empbasic;
+	}
+	public int getempno(int empno)
+	{
+		return empno;
+	}
+	public String getempname(String empname)
+	{
+		return empname;
+	}
+	public int getempbasic(int empbasic)
+	{
+		return empbasic;
+	}
+}
+
+public class unit3_6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     k obj = new k(1,"keshav",100000);
+     Scanner sc = new Scanner(System.in);
+   
+     int empno=sc.nextInt();
+     obj.setempno(empno);
+     System.out.println(obj.getempno(empno));
+     
+     String empname =sc.nextLine();
+     obj.setempname(empname);
+     System.out.print(obj.getempname(empname));
+     
+     int empbasic =sc.nextInt();
+     obj.setempbasic(empbasic);
+     System.out.print(obj.getempbasic(empbasic));
+     
+     try
+     {                                
+   	 Filewrite f1 = new Filewrite("C:\\Users\\student\\Desktop\\keshav.txt");
+//    	 
+   	 f1.write(empno + empname+ empbasic);
+  	 f1.close();
+     }  
+	
+     catch(Exception e)
+     {
+    	 System.out.println("error accured");
+     }
+    
+		
+	}
+
+}
