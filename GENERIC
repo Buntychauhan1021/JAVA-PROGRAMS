@@ -1,0 +1,74 @@
+
+package keshav1;
+
+class keshav <T>
+{
+	 void print(T n[])
+		{
+			//int i;
+			//T x;
+			for(T t : n)
+			{
+				System.out.print(t+" ");
+			}
+		}
+}
+public class Generic<T> 
+{
+	public static void main(String []args)
+	{
+		keshav<Integer> obj = new keshav<Integer>();
+		keshav<Character> obj1 = new keshav<Character>();
+		Character a1[]= {'a','b','c','d','e'};
+		Integer a[]= {1,2,3,4,5};
+		obj.print(a);
+		System.out.println();
+		obj1.print(a1);
+	}
+}
+
+
+//package keshav1;
+//
+//
+//public class Generic<T,V>
+//
+//{
+//	T n;
+//	V n1;
+//	
+//	void set(T n,V n1)
+//	{    this.n=n;
+//		this.n1=n1;
+//		
+//	}
+//	  T get()
+//	 {
+////		 System.out.println(n);
+////		 System.out.println(n1);
+//		 return n;
+//	 }
+//	  V get1()
+//		 {
+////			 System.out.println(n);
+////			 System.out.println(n1);
+//			 return n1;
+//		 }
+//
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stubs
+//      
+//		//Generic <Integer,String> obj = new  Generic <Integer,String>();
+//		Generic <Integer,String> obj = new  Generic <Integer,String>();
+////		obj.n=12;
+////		obj.n1="keshav";
+//		
+//		obj.set(89, "keshav");
+//		 System.out.println(obj.get());
+//		 System.out.println(obj.get1());
+//		
+//		
+//		
+//	}
+//
+//}
