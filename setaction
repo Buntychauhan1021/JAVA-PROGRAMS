@@ -1,0 +1,63 @@
+package keshav;
+
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+import javax.swing.event.TreeExpansionListener;
+
+public class buttonevent extends JFrame implements  ActionListener
+{
+	
+	JTextField t1;
+	JButton b1,b2;
+	public buttonevent() throws HandlessException
+	{
+		t1=new JTextField("enter text here",20);
+		add(t1);
+		b1 = new JButton("ok");
+		add(b1);
+		b2=new JButton("cancle");
+		add(b2);
+		setVisible(true);
+		setLayout(new FlowLayout());
+		setSize(500,500);
+		b1.addActionListener(this);
+		b2.addActionListener(this);
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        try {
+			new buttonevent();
+		} catch (HandlessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+
+
+	
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+		// TODO Auto-generated method stub
+		if(b1==e.getSource())
+		{
+			t1.setText("button clicked");
+		}
+		
+		else
+		{
+			t1.setText("cancle Button");
+		}
+	}
+
+
+}
